@@ -1,0 +1,212 @@
+:root {
+    --bg-primary: #0f1419;
+    --bg-secondary: #1a1f25;
+    --bg-card: #1e242c;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a8b6;
+    --accent-blue: #3366ff;
+    --accent-green: #00b07c;
+    --accent-red: #ff4757;
+    --accent-yellow: #ffd43b;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.app-container {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.top-nav {
+    background-color: var(--bg-secondary);
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: var(--transition-speed);
+}
+
+.icon-button:hover {
+    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.machine-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    background-color: var(--bg-secondary);
+    border: none;
+    color: var(--text-secondary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition-speed);
+}
+
+.tab-button.active {
+    background-color: var(--accent-blue);
+    color: var(--text-primary);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.dashboard-card {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition-speed);
+    max-width: 2000px;  /* Ancho máximo */
+    max-height: 300px; /* Altura máxima */
+  
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.status-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring-circle-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 8;
+}
+
+.progress-ring-circle {
+    fill: none;
+    stroke: var(--accent-green);
+    stroke-width: 8;
+    stroke-dasharray: 339.292;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.percentage-text {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-green);
+}
+
+.maintenance-content {
+    text-align: center;
+    padding: 1rem;
+}
+
+.days-counter {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-yellow);
+}
+
+.days-label {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.alerts-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.alert-counter {
+    text-align: center;
+}
+
+.alert-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-red);
+}
+
+.alert-icon {
+    font-size: 2rem;
+    color: var(--accent-red);
+}
+
+.recent-alerts-list {
+    margin-top: 1rem;
+}
+
+.alert-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.alert-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.alert-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.alert-action {
+    background-color: var(--accent-red);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition-speed);
+}
+
+.alert-action:hover {
+    background-color: #ff3344;
+}
